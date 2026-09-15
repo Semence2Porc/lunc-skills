@@ -1,0 +1,67 @@
+{
+  "version": 1,
+  "generated_at": "2026-09-15T10:49:25.962Z",
+  "base_url": "https://lunc-skills.example.invalid",
+  "skills": [
+    {
+      "name": "cklunc-integration",
+      "description": "CKLUNC is an ICRC-1/ICRC-2 twin of LUNC on the Internet Computer, backed 1:1 by LUNC held in the minter's custody, with **dynamic tax parity**: LUNC's burn-tax parameters are fetched from the chain…",
+      "url": "https://lunc-skills.example.invalid/skills/cklunc-integration/SKILL.md",
+      "sha256": "20c20b4e9a3033a79f1c97e8d7cc82ad597fa4a704ccfb73f38e9acf02074c10"
+    },
+    {
+      "name": "cosmos-sdk-gotchas",
+      "description": "Chain-halt-class bug patterns for Go contributors on Terra Classic / Cosmos SDK chains. Every pattern here maps to a real, shipped PR with a reproducing test — this is the corpus of what actually…",
+      "url": "https://lunc-skills.example.invalid/skills/cosmos-sdk-gotchas/SKILL.md",
+      "sha256": "6e1f58f8edee02c56505669c3bb2741c9ab83109f67232d415ef7e64f9b42ddc"
+    },
+    {
+      "name": "icp-dapp-hosting",
+      "description": "How to host a LUNC community site, dapp frontend, or full-stack dapp on the Internet Computer so it cannot be deplatformed: no server to pay, no registrar to lapse, no host to censor. This skill is a…",
+      "url": "https://lunc-skills.example.invalid/skills/icp-dapp-hosting/SKILL.md",
+      "sha256": "4aac65136faf09427a1f051c78bceb3224b627e4aa95676d84192954c9f1bc28"
+    },
+    {
+      "name": "lunc-mcp",
+      "description": "Live Terra Classic tools exposed to AI agents over the Model Context Protocol, in two deployments from one shared tool schema",
+      "url": "https://lunc-skills.example.invalid/skills/lunc-mcp/SKILL.md",
+      "sha256": "371eb9a950d1d026778c2906066aed871e6780ba12289d8a79a636dc8c453b8f"
+    },
+    {
+      "name": "terra-classic-gov",
+      "description": "Reading and participating in Terra Classic governance from agent workflows: proposals, tallies, quorum math with the chain's verified parameters, and the pitfalls around params routes and…",
+      "url": "https://lunc-skills.example.invalid/skills/terra-classic-gov/SKILL.md",
+      "sha256": "c6b45ef6aea019ae00a460a3803bc7b706cc338c72d91502711c1fbf186dc037"
+    },
+    {
+      "name": "terra-classic-indexing",
+      "description": "Reading Terra Classic state into ledgers, CSVs, and analytics without the classic indexing bugs: silent mis-scaling of unknown denoms, lost precision, and pagination mistakes that silently drop data.",
+      "url": "https://lunc-skills.example.invalid/skills/terra-classic-indexing/SKILL.md",
+      "sha256": "d0bf904d963795e81977276d9a239b94da1a3891790ab1dad8079de64a8463cc"
+    },
+    {
+      "name": "terra-classic-market-data",
+      "description": "The economic read-surface an AI agent needs on Terra Classic — tax and burn state, supplies, swap rates, oracle health — with the pitfalls that make naive reads wrong (schema drift, staleness,…",
+      "url": "https://lunc-skills.example.invalid/skills/terra-classic-market-data/SKILL.md",
+      "sha256": "e906600142affd1f42deb6cc2853964098ba277cb93c9ee19c64ef8fcd1aa4d9"
+    },
+    {
+      "name": "terra-classic-node",
+      "description": "Connection and network facts for building against the Terra Classic (columbus-5) chain: verified endpoints, key constants, module routes, and the pitfalls that come from the chain's non-standard…",
+      "url": "https://lunc-skills.example.invalid/skills/terra-classic-node/SKILL.md",
+      "sha256": "31bebaac1e77d4c312e7b078758e786ded76a7920e2f7f698881845efea0094e"
+    },
+    {
+      "name": "terra-classic-tx",
+      "description": "Building, signing, fee-computing and broadcasting Terra Classic transactions without the two classic failure modes: float fee math that produces amounts chains reject, and missing dedup timestamps…",
+      "url": "https://lunc-skills.example.invalid/skills/terra-classic-tx/SKILL.md",
+      "sha256": "d5d63d955a31e65a8905ac46b5979330a8221c2b20e6a5583941c36b02a19579"
+    },
+    {
+      "name": "terra-classic-wallet-ops",
+      "description": "Performing wallet operations on Terra Classic from AI-agent workflows without becoming an attack vector. The rails here are structural, not advisory: dry-run first, per-transaction human…",
+      "url": "https://lunc-skills.example.invalid/skills/terra-classic-wallet-ops/SKILL.md",
+      "sha256": "a99c7ceac8ea8e135f291b2afb81faaffa60a9f450338909d04dba5a81adc032"
+    }
+  ]
+}

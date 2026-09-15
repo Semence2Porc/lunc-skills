@@ -1,0 +1,8 @@
+canisters:
+  - name: lunc-skills
+    recipe:
+      type: "@dfinity/static-site@v0.3.3"
+      configuration:
+        build:
+          - node scripts/generate-index.mjs
+        dir: site
