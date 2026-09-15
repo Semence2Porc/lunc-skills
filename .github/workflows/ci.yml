@@ -25,9 +25,9 @@ jobs:
       - name: Fail on index drift (hashes/URLs; ignore the generation timestamp)
         run: |
           payload=$(git diff --unified=0 -- INDEX-HASHES.json \
-            | grep -E '^[+-]' \
-            | grep -vE '^(\+\+\+|---)' \
-            | grep -v '"generated_at"')
+            | { grep -E '^[+-]' || true; } \
+            | { grep -vE '^(\+\+\+|---)' || true; } \
+            | { grep -v '"generated_at"' || true; } )
           if [ -n "$payload" ]; then
             echo "$payload"
             echo "::error::INDEX-HASHES.json is stale — run 'SKILLS_BASE_URL=https://lunc-skills.example.invalid node scripts/generate-index.mjs' and commit the result."
