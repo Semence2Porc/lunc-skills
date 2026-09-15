@@ -1,5 +1,7 @@
 # lunc-skills
 
+[![CI](https://github.com/Semence2Porc/lunc-skills/actions/workflows/ci.yml/badge.svg)](https://github.com/Semence2Porc/lunc-skills/actions/workflows/ci.yml)
+
 Agent-readable Terra Classic skills — the first skill set for any Cosmos SDK chain,
 in the same format [dfinity/icskills](https://github.com/dfinity/icskills) uses for
 the Internet Computer.

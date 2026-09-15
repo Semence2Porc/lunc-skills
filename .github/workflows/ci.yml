@@ -1,0 +1,58 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+
+      - name: Regenerate skill index
+        env:
+          SKILLS_BASE_URL: https://lunc-skills.example.invalid
+        run: node scripts/generate-index.mjs
+
+      - name: Fail on index drift (hashes/URLs; ignore the generation timestamp)
+        run: |
+          payload=$(git diff --unified=0 -- INDEX-HASHES.json \
+            | grep -E '^[+-]' \
+            | grep -vE '^(\+\+\+|---)' \
+            | grep -v '"generated_at"')
+          if [ -n "$payload" ]; then
+            echo "$payload"
+            echo "::error::INDEX-HASHES.json is stale — run 'SKILLS_BASE_URL=https://lunc-skills.example.invalid node scripts/generate-index.mjs' and commit the result."
+            exit 1
+          fi
+          echo "Index hashes match the skills."
+
+      - name: Offline link check (internal relative links)
+        run: |
+          set -u
+          fail=0
+          files=$(find skills -name 'SKILL.md'; echo README.md awesome-lunc-ai/README.md)
+          for f in $files; do
+            dir=$(dirname "$f")
+            # relative markdown link targets only (skip http/mailto/anchor-only)
+            for link in $(grep -oE '\]\([^)#h][^)#]*\)' "$f" | sed -E 's/^\]\(//; s/\)$//'); do
+              target="$dir/$link"
+              if [ ! -e "$target" ]; then
+                echo "BROKEN: $f -> $link"
+                fail=1
+              fi
+            done
+          done
+          if [ "$fail" -ne 0 ]; then
+            echo "::error::Broken internal links found."
+            exit 1
+          fi
+          echo "All internal links resolve."

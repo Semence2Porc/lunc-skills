@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generated_at": "2026-09-15T10:49:25.962Z",
+  "generated_at": "2026-09-15T11:15:57.012Z",
   "base_url": "https://lunc-skills.example.invalid",
   "skills": [
     {
@@ -25,7 +25,7 @@
       "name": "lunc-mcp",
       "description": "Live Terra Classic tools exposed to AI agents over the Model Context Protocol, in two deployments from one shared tool schema",
       "url": "https://lunc-skills.example.invalid/skills/lunc-mcp/SKILL.md",
-      "sha256": "371eb9a950d1d026778c2906066aed871e6780ba12289d8a79a636dc8c453b8f"
+      "sha256": "005ba371615459d714d8a3cd7410cdc637f8e77f7eb817794ee0ab401e4f7452"
     },
     {
       "name": "terra-classic-gov",
@@ -43,7 +43,7 @@
       "name": "terra-classic-market-data",
       "description": "The economic read-surface an AI agent needs on Terra Classic — tax and burn state, supplies, swap rates, oracle health — with the pitfalls that make naive reads wrong (schema drift, staleness,…",
       "url": "https://lunc-skills.example.invalid/skills/terra-classic-market-data/SKILL.md",
-      "sha256": "e906600142affd1f42deb6cc2853964098ba277cb93c9ee19c64ef8fcd1aa4d9"
+      "sha256": "3cc6581b817b7bbffefe55971fc41b465036d4ff6e2023521aae2cd02d2bfd5b"
     },
     {
       "name": "terra-classic-node",
@@ -61,7 +61,7 @@
       "name": "terra-classic-wallet-ops",
       "description": "Performing wallet operations on Terra Classic from AI-agent workflows without becoming an attack vector. The rails here are structural, not advisory: dry-run first, per-transaction human…",
       "url": "https://lunc-skills.example.invalid/skills/terra-classic-wallet-ops/SKILL.md",
-      "sha256": "a99c7ceac8ea8e135f291b2afb81faaffa60a9f450338909d04dba5a81adc032"
+      "sha256": "8b070390b8f3c79cd10fc31efed3bae0bbb8d1247f322eda0c7048e6bc203987"
     }
   ]
 }
